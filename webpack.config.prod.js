@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
+const publicPath = process.env.PREFIX_PATHS ? '/kanaquiz/' : undefined;
+
 module.exports = {
   mode: 'production',
   entry: {
@@ -12,6 +14,7 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath,
   },
   resolve: {
     extensions: ['.js', '.jsx']

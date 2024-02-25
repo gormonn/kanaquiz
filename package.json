@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --env.mode development --host 0.0.0.0 --config webpack.config.js",
     "mobile": "webpack-dev-server --open --env.mode development --host 0.0.0.0 --public 192.168.1.8:8080",
-    "build": "webpack --env.mode production --config webpack.config.prod.js"
+    "build": "webpack --env.mode production --config webpack.config.prod.js",
+    "build:pages": "PREFIX_PATHS=true webpack --env.mode production --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
